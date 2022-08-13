@@ -39,9 +39,6 @@ class Calendar {
         } else {
             let i = 1
             while (i <= _currentMonthDayCount) {
-                if (this) {
-
-                }
                 days.push(new Day(
                     new Date(year, month, i),
                     i,
