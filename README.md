@@ -50,23 +50,13 @@ $ npm install calendar-npm
 
 #### Methods
 
-| Method      | argument   |
-| ----------- | ---------- |
-| toDate      | new Date() |
-| toPrevMonth | none       |
-| toNextMonth | none       |
-| toNextYear  | none       |
-| toPrevYear  | none       |
-
-toDate(Date {Object})
-
-toPrevMonth()
-
-toNextMonth()
-
-toNextYear()
-
-toPrevYear()
+| Method      | argument      |
+| ----------- | ------------- |
+| toDate      | Date {Object} |
+| toPrevMonth | none          |
+| toNextMonth | none          |
+| toNextYear  | none          |
+| toPrevYear  | none          |
 
 Example:
 
