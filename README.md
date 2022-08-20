@@ -4,7 +4,6 @@ This project is intended to be consumed for all of type java script projects.
 
 [![Build Status](https://github.com/Gagik-arch/calendar)](https://github.com/Gagik-arch/calendar)
 [![npm version](https://www.npmjs.com/package/calendar-npm)](https://www.npmjs.com/package/calendar-npm)
-[![Coverage Status](https://coveralls.io/github/Gagik-arch/calendar)](https://coveralls.io/github/Gagik-arch/calendar)
 
 ## Table of contents
 
