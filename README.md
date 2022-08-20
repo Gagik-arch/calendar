@@ -7,27 +7,12 @@ This project is intended to be consumed for all of type java script projects.
 
 ## Table of contents
 
--   [Prerequisites](#prerequisites)
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [Arguments](#Arguments)
 -   [Methods](#Methods)
 -   [Built With](#built-with)
 -   [Author](#author)
--   [License](#license)
-
-## Prerequisites
-
-This project requires NodeJS (version 8 or later) and NPM.
-[Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
-To make sure you have them available on your machine,
-try running the following command.
-
-```sh
-$ npm -v && node -v
-6.4.1
-v8.16.0
-```
 
 ## Installation
 
