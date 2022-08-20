@@ -15,7 +15,7 @@ class Calendar {
         const _currentMonthDayCount = this.#daysInMonth(month + 1, year)
         const _prevMonthDayCount = this.#daysInMonth(month, year)
         const array = []
-        console.log(this)
+
         if (_firstDayOfWeek > 0) {
             let p = _prevMonthDayCount - _firstDayOfWeek + 1, c = 1;
             while (p <= _prevMonthDayCount) {
@@ -76,7 +76,7 @@ class Calendar {
         return this
     }
 
-    toPrevMonth() {
+    tcoPrevMonth() {
         this.currentDate = this.#getPrevMonth(this.currentDate)
         this.days = this.initCalendar(this.currentDate)
         return this
