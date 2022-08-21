@@ -2,9 +2,14 @@
   "name": "calendar-npm",
   "version": "1.8.0",
   "description": "Calendar for java script (type script) projects.",
-  "main": "calendar.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "node dist/test.js",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,7 @@
     "type script calendar",
     "datepicker"
   ],
-  "author": "Gagik-arch",
+  "author": "Gagik Chilingaryan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Gagik-arch/calendar/issues"

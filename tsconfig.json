@@ -1,15 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./src",
-    "strict": true
-  },
-  "scripts":{
-    "test":"echo \"Error: not test specified\" && exit 1",
-    "build":"tsc"
-  },
-  "include": ["lib", "src/interfaces.ts", "src/index.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "ESNext",
+        "declaration": true,
+        "outDir": "./lib",
+        "strict": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "src/**/*"
+    ]
 }
