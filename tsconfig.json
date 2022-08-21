@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib/index.d.ts",
+    "strict": true
+  },
+  "scripts":{
+    "test":"echo \"Error: not test specified\" && exit 1",
+    "build":"tsc"
+  },
+  "include": ["lib", "src/interfaces.ts", "src/index.ts"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}

@@ -1,6 +1,6 @@
 import { DayI, CalendarI } from "./interfaces";
 
-class Calendar {
+class Calendar implements CalendarI {
     public weekDays = [
         "Sunday",
         "Monday",
@@ -37,8 +37,8 @@ class Calendar {
     }
 
     initCalendar(date: Date) {
-        const year = date.getFullYear();
-        const month = date.getMonth();
+        const year: number = date.getFullYear();
+        const month: number = date.getMonth();
 
         const _firstDayOfWeek: number = this.getFirstDayOfWeek(month + 1, year);
         const _currentMonthDayCount: number = this.daysInMonth(month + 1, year);
@@ -106,38 +106,32 @@ class Calendar {
         return array;
     }
 
-    public toDate(date, selectedRange) {
+    public toDate(date: Date, selectedRange: Date) {
         if (selectedRange) {
             this.createRange(selectedRange);
         }
         this.selectedDate = date;
         this.days = this.initCalendar(this.selectedDate);
-
-        return this;
     }
 
     public toNextMonth() {
         this.selectedDate = this.getNextMonth(this.selectedDate);
         this.days = this.initCalendar(this.selectedDate);
-        return this;
     }
 
     public tcoPrevMonth() {
         this.selectedDate = this.getPrevMonth(this.selectedDate);
         this.days = this.initCalendar(this.selectedDate);
-        return this;
     }
 
     public toNextYear() {
         this.selectedDate = this.getNextYear(this.selectedDate);
         this.days = this.initCalendar(this.selectedDate);
-        return this;
     }
 
     public toPrevYear() {
         this.selectedDate = this.getPrevYear(this.selectedDate);
         this.days = this.initCalendar(this.selectedDate);
-        return this;
     }
 
     private daysInMonth(month: number, year: number) {
@@ -173,8 +167,9 @@ class Calendar {
         } else {
             this.range.push(selectedRange);
         }
-        this.range = this.range.sort(
-            (a, b) => new Date(a).getTime() - new Date(b).getTime()
+
+        this.range = this.range?.sort(
+            (a: Date, b: Date) => a.getTime() - b.getTime()
         );
         this.counter++;
     }
@@ -191,5 +186,4 @@ class Day {
     }
 }
 
-export { CalendarI, DayI };
 export default Calendar;

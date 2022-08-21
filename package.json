@@ -25,7 +25,7 @@
     "url": "https://github.com/Gagik-arch/calendar/issues"
   },
   "homepage": "https://github.com/Gagik-arch/calendar#readme",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^4.7.4"
   }
 }
