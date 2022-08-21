@@ -8,8 +8,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
-    "test": "node dist/test.js",
-    "start": "node dist/index.js"
+    "test": "node lib/index.js",
+    "start": "node lib/index.js"
   },
   "repository": {
     "type": "git",
