@@ -11,6 +11,7 @@ This project is intended to be consumed for all of type java script projects.
 -   [Usage](#usage)
 -   [Arguments](#Arguments)
 -   [Methods](#Methods)
+-   [Object](#Object)
 -   [Built With](#built-with)
 -   [Author](#author)
 
@@ -56,6 +57,22 @@ btn.onclick = () => {
     // calendar.toPrevYear();
 };
 ```
+
+```ts
+import Calendar, { CalendarI, DayI } from "calendar-npm";
+
+const calendar: CalendarI = new Calendar();
+```
+
+#### Object
+
+| keys         | values        |
+| ------------ | ------------- |
+| currentDate  | Date {Object} |
+| selectedDate | Date {Object} |
+| months       | [string]      |
+| weekDays     | [string]      |
+| days         | Day{Object}   |
 
 ## Built With
 
