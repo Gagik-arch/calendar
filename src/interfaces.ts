@@ -11,4 +11,9 @@ export interface CalendarI {
     months: string[];
     weekDays: string[];
     range: Date[];
+    toNextMonth(): void;
+    toPrevMonth(): void;
+    toNextYear(): void;
+    toPrevYear(): void;
+    toDate(date: Date, selectedRange: Date): void;
 }

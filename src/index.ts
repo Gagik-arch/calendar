@@ -28,7 +28,7 @@ class Calendar implements CalendarI {
     public days: DayI[];
     public selectedDate: Date;
     public range: Date[] = [];
-    private counter: number = 0;
+    private _counter: number = 0;
 
     constructor(date: Date = new Date()) {
         this.currentDate = new Date();
@@ -119,7 +119,7 @@ class Calendar implements CalendarI {
         this.days = this.initCalendar(this.selectedDate);
     }
 
-    public tcoPrevMonth() {
+    public toPrevMonth() {
         this.selectedDate = this.getPrevMonth(this.selectedDate);
         this.days = this.initCalendar(this.selectedDate);
     }
@@ -162,7 +162,7 @@ class Calendar implements CalendarI {
 
     private createRange(selectedRange: Date) {
         this.range = [this.selectedDate];
-        if (this.counter % 2 === 0) {
+        if (this._counter % 2 === 0) {
             this.range.push(selectedRange);
         } else {
             this.range.push(selectedRange);
@@ -171,7 +171,7 @@ class Calendar implements CalendarI {
         this.range = this.range?.sort(
             (a: Date, b: Date) => a.getTime() - b.getTime()
         );
-        this.counter++;
+        this._counter++;
     }
 }
 class Day {
@@ -186,5 +186,5 @@ class Day {
     }
 }
 
-export { CalendarI, DayI };
+export type { CalendarI, DayI };
 export default Calendar;
