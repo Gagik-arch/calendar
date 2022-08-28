@@ -2,7 +2,7 @@
 
 This project is intended to be consumed for all of type java script projects.
 
-[![Build Status](https://github.com/Gagik-arch/calendar)](https://github.com/Gagik-arch/calendar)
+[![Build Status](https://github.com/Gagik-arch/calendar-npm)](https://github.com/Gagik-arch/calendar-npm)
 [![npm version](https://www.npmjs.com/package/calendar-npm)](https://www.npmjs.com/package/calendar-npm)
 
 ## Table of contents
@@ -59,9 +59,9 @@ btn.onclick = () => {
 ```
 
 ```ts
-import Calendar, { CalendarI, DayI } from "calendar-npm";
+import Calendar, { ICalendar, IDay } from "calendar-npm";
 
-const calendar: CalendarI = new Calendar();
+const calendar: ICalendar = new Calendar();
 ```
 
 #### Object
@@ -80,4 +80,4 @@ const calendar: CalendarI = new Calendar();
 
 ## Author
 
--   **Gagik** - _Initial work_ - [gagik-arch](https://github.com/Gagik-arch)
+-   **Gagik** - _Initial work_ - [gagik-arch](https://github.com/Gagik-arch/calendar-npm)

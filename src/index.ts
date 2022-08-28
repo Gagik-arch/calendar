@@ -1,6 +1,6 @@
-import { DayI, CalendarI } from "./interfaces";
+import { IDay, ICalendar } from "./interfaces";
 
-class Calendar implements CalendarI {
+class Calendar implements ICalendar {
     public weekDays = [
         "Sunday",
         "Monday",
@@ -25,7 +25,7 @@ class Calendar implements CalendarI {
         "December",
     ];
     public currentDate: Date;
-    public days: DayI[];
+    public days: IDay[];
     public selectedDate: Date;
     public range: Date[] = [];
     private _counter: number = 0;
@@ -33,17 +33,17 @@ class Calendar implements CalendarI {
     constructor(date: Date = new Date()) {
         this.currentDate = new Date();
         this.selectedDate = new Date(date.setHours(0, 0, 0, 0));
-        this.days = this.initCalendar(this.currentDate);
+        this.days = this.initCalendar();
     }
 
-    initCalendar(date: Date) {
-        const year: number = date.getFullYear();
-        const month: number = date.getMonth();
+    initCalendar() {
+        const year: number = this.selectedDate.getFullYear();
+        const month: number = this.selectedDate.getMonth();
 
         const _firstDayOfWeek: number = this.getFirstDayOfWeek(month + 1, year);
         const _currentMonthDayCount: number = this.daysInMonth(month + 1, year);
         const _prevMonthDayCount: number = this.daysInMonth(month, year);
-        const array: DayI[] = [];
+        const array: IDay[] = [];
 
         if (_firstDayOfWeek > 0) {
             let p = _prevMonthDayCount - _firstDayOfWeek + 1,
@@ -111,27 +111,27 @@ class Calendar implements CalendarI {
             this.createRange(selectedRange);
         }
         this.selectedDate = date;
-        this.days = this.initCalendar(this.selectedDate);
+        this.days = this.initCalendar();
     }
 
     public toNextMonth() {
         this.selectedDate = this.getNextMonth(this.selectedDate);
-        this.days = this.initCalendar(this.selectedDate);
+        this.days = this.initCalendar();
     }
 
     public toPrevMonth() {
         this.selectedDate = this.getPrevMonth(this.selectedDate);
-        this.days = this.initCalendar(this.selectedDate);
+        this.days = this.initCalendar();
     }
 
     public toNextYear() {
         this.selectedDate = this.getNextYear(this.selectedDate);
-        this.days = this.initCalendar(this.selectedDate);
+        this.days = this.initCalendar();
     }
 
     public toPrevYear() {
         this.selectedDate = this.getPrevYear(this.selectedDate);
-        this.days = this.initCalendar(this.selectedDate);
+        this.days = this.initCalendar();
     }
 
     private daysInMonth(month: number, year: number) {
@@ -186,5 +186,5 @@ class Day {
     }
 }
 
-export type { CalendarI, DayI };
+export type { ICalendar, IDay };
 export default Calendar;
