@@ -1,4 +1,4 @@
-# Maintainers Wanted
+# Calendar-npm
 
 This project is intended to be consumed for all of type java script projects.
 
