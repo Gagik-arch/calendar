@@ -142,18 +142,34 @@ class Calendar implements ICalendar {
     }
 
     private getPrevMonth(date: Date) {
-        return new Date(date.getFullYear(), date.getMonth() - 1, 1);
+        return new Date(
+            date.getFullYear(),
+            date.getMonth() - 1,
+            date.getDate()
+        );
     }
 
     private getNextMonth(date: Date) {
-        return new Date(date.getFullYear(), date.getMonth() + 1, 1);
+        return new Date(
+            date.getFullYear(),
+            date.getMonth() + 1,
+            date.getDate()
+        );
     }
 
     private getPrevYear(date: Date) {
-        return new Date(date.getFullYear() - 1, date.getMonth(), 1);
+        return new Date(
+            date.getFullYear() - 1,
+            date.getMonth(),
+            date.getDate()
+        );
     }
     private getNextYear(date: Date) {
-        return new Date(date.getFullYear() + 1, date.getMonth(), 1);
+        return new Date(
+            date.getFullYear() + 1,
+            date.getMonth(),
+            date.getDate()
+        );
     }
     private compareTwoDates(date1: Date, date2: Date) {
         return date1.getTime() === date2.getTime();
