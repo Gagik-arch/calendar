@@ -3,11 +3,9 @@
         "target": "ES2017",
         "module": "ESNext",
         "declaration": true,
-        "outDir": "./lib",
+        "outDir": "./dist",
         "strict": true,
         "allowSyntheticDefaultImports": true
     },
-    "include": [
-        "src/**/*"
-    ]
+    "include": ["src/**/*"]
 }

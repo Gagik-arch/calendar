@@ -18,10 +18,9 @@
     "calendar",
     "java script calendar",
     "js calendar",
-    "datepicker",
+    "date picker",
     "ts calendar",
-    "type script calendar",
-    "datepicker"
+    "type script calendar"
   ],
   "author": "Gagik Chilingaryan",
   "license": "ISC",
@@ -30,6 +29,6 @@
   },
   "homepage": "https://github.com/Gagik-arch/calendar#readme",
   "devDependencies": {
-    "typescript": "^4.7.4"
+    "typescript": "^4.9.5"
   }
 }

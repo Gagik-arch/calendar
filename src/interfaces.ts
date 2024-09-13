@@ -5,11 +5,8 @@ export interface IDay {
 }
 
 export interface ICalendar {
-    currentDate: Date;
-    selectedDate: Date;
+    value: Date;
     days: IDay[];
-    months: string[];
-    weekDays: string[];
     range: Date[];
     toNextMonth(): void;
     toPrevMonth(): void;
