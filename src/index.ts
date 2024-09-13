@@ -114,6 +114,7 @@ class Calendar implements ICalendar {
     }
 
     public toDate(date: Date, selectedRange: Date) {
+        if (!date) throw new Error('date is required');
         if (selectedRange) {
             this.createRange(selectedRange);
         }

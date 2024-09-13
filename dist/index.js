@@ -88,6 +88,8 @@ class Calendar {
         return dates;
     }
     toDate(date, selectedRange) {
+        if (!date)
+            throw new Error('date is required');
         if (selectedRange) {
             this.createRange(selectedRange);
         }

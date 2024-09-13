@@ -11,6 +11,6 @@ btn.addEventListener('click', () => {
 });
 
 btn2.addEventListener('click', () => {
-    c.toDate();
+    c.toDate(new Date('2024-10-12'));
     console.log(c);
 });
